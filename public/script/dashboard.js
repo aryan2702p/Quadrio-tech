@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     async function fetchCars() {
-       await fetch('http://localhost:3000/api/cars', {
+       await fetch('/api/cars', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${bearerToken}`,
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function deleteCar(carId) {
-        fetch(`http://localhost:3000/api/cars/${carId}`, {
+        fetch(`/api/cars/${carId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${bearerToken}`,
