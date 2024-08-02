@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const method = carId ? 'PUT' : 'POST';
-        const url = carId ? `http://localhost:3000/api/cars/${carId}` : 'http://localhost:3000/api/cars';
+        const url = carId ? `/api/cars/${carId}` : '/api/cars';
 
         fetch(url, {
             method: method,

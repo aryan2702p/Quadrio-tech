@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bearerToken = localStorage.getItem('token');
     //
-    fetch('http://localhost:3000/api/cars',{
+    fetch('/api/cars',{
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${bearerToken}`,
