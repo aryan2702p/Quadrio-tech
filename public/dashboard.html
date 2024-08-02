@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/public/styles/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <button id="addCarBtn" class="add-car-btn">Add Car</button>
+        <div id="total-cars" class="total Cars">Total Cars : <span id="cars-count"></span></div>
+        <div id="card-list" class="card-list">
+            <!-- Cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal for adding/updating car -->
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Add Car</h2>
+            <form id="carForm">
+                <input type="hidden" id="carId">
+                <label for="carName">Car Name</label>
+                <input type="text" id="carName" required>
+                <label for="manufacturingYear">Manufacturing Year</label>
+                <input type="number" id="manufacturingYear" required>
+                <label for="price">Price</label>
+                <input type="number" id="price" required>
+                <label for="imageUrl">Image URL</label>
+                <input type="url" id="imageUrl" required>
+                <button type="submit" class="submit-btn">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/public/script/dashboard.js"></script>
+</body>
+</html>
