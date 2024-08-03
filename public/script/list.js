@@ -44,4 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(error => console.error('Error fetching car data:', error));
+
+        const logoutBtn = document.getElementById('logout');
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        window.location.href = '/';
+    });
 });

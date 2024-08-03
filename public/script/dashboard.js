@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceInput = document.getElementById('price');
     const imageUrlInput = document.getElementById('imageUrl');
     const totalcars = document.getElementById('cars-count');
+    const logoutBtn = document.getElementById('logout');
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        window.location.href = '/';
+    });
 
     if (!bearerToken) {
         // Handle missing token, e.g., redirect to login
